@@ -7,6 +7,7 @@ end
 
 gem 'activeadmin'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
