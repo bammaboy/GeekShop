@@ -1,0 +1,63 @@
+<!-- grow -->
+<div class="grow">
+  <div class="container">
+    <h2><%= @product.title %></h2>
+  </div>
+</div>
+<!-- grow -->
+<div class="product">
+  <div class="container">
+    <div class="product-price1">
+      <div class="top-sing">
+        <div class="col-md-7 single-top">
+          <div class="flexslider">
+            <ul class="slides">
+              <li data-thumb="images/si.jpg">
+                <div class="thumb-image"> <img src="images/si.jpg" data-imagezoom="true" class="img-responsive"> </div>
+              </li>
+              <li data-thumb="images/si1.jpg">
+                <div class="thumb-image"> <img src="images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+              </li>
+              <li data-thumb="images/si2.jpg">
+                <div class="thumb-image"> <img src="images/si2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+              </li>
+              <li data-thumb="images/si3.jpg">
+                <div class="thumb-image"> <img src="images/si3.jpg" data-imagezoom="true" class="img-responsive"> </div>
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"> </div>
+          <!-- slide -->
+          <!-- FlexSlider -->
+          <script defer src="js/jquery.flexslider.js"></script>
+          <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+          <script>
+              // Can also be used with $(document).ready()
+              $(window).load(function() {
+                  $('.flexslider').flexslider({
+                      animation: "slide",
+                      controlNav: "thumbnails"
+                  });
+              });
+          </script>
+        </div>
+        <div class="col-md-5 single-top-in simpleCart_shelfItem">
+          <div class="single-para">
+            <h4><%= @product.title %></h4>
+            <div class="star-on">
+              <div class="review">
+                <p><%= @product.author%></p>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+            <h5 class="item_price"><%= number_to_currency(@product.price, unit: "грн.", format: '%n %u') %></h5>
+            <p><%= @product.description %></p>
+            <a href="#" class="add-cart item_add">ADD TO CART</a>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
